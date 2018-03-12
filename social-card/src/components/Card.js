@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import cardImage from '../img/1mdb.jpg';
 
 class Card extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
+        let post = this.props.post;
+
         return (
             <div className="cardContainer">
                 <div className="cardHeader">
-                    <img className="cardImage" src={cardImage} />
+                    <img className="cardImage" src={post.cardPic} />
                 </div>
                 <div className="cardBody">
-                    <text><b>Learning React? Start Small.</b></text>
-                    <text>Can't pry yourself away from the tutorials? 
-                        The cure is to make tiny little experiment apps. </text>
-                    <text style={{ color: 'grey' }}>dev.to</text>
+                    <text><b>{post.title}</b></text>
+                    <text>{post.description} </text>
+                    <text style={{ color: 'grey' }}>{post.website}</text>
                 </div>
             </div>
         );

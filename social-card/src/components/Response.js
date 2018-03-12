@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import { Glyphicon } from 'react-bootstrap';
 
 class Response extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
+        let post = this.props.post;
+
         return (
             <div className="responseContainer">
                 <div className="iconGroup">
                     <Glyphicon glyph="comment" />
-                    <div>2</div>
+                    <div>{post.comment}</div>
                 </div>
                 <div className="iconGroup">
                     <Glyphicon style={{ color: 'green' }} glyph="retweet" />
-                    <div style={{ color: 'green' }}>47</div>
+                    <div style={{ color: 'green' }}>{post.retweet}</div>
                 </div>
                 <div className="iconGroup">
                     <Glyphicon style={{ color: 'red' }} glyph="heart" />
-                    <div style={{ color: 'red' }}>190</div>
+                    <div style={{ color: 'red' }}>{post.like}</div>
                 </div>
                 <div className="iconGroup">
                     <Glyphicon glyph="envelope" />
