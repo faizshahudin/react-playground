@@ -5,10 +5,6 @@ import Card from './Card';
 import Response from './Response';
 
 class CardSection extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let post = this.props.post;
         console.log(post);

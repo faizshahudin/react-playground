@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { Glyphicon } from 'react-bootstrap';
 
 class Response extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let post = this.props.post;
 
